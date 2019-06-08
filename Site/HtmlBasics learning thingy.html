@@ -6,17 +6,29 @@
     </head>
     <body> <!--Main root of all contain visible to the user know as viewport-->
       <header>Learning stuff ! 
-        <nav>This is navigation .. Nothin here bug off </nav> <!--Navigation!-->
+        <nav>This is navigation 
+          <ul>
+            <li>
+              <a href="#Block" > Block and inline Elements</a>
+            </li>
+            <li>
+              <a href="#Head">Heading</a>
+            </li>
+            <li>
+              <a href="#but" title="Bottom" >Bottom of the Page</a>
+            </li>
+          </ul>
+        </nav> <!--Navigation!-->
       </header> <!--Header information -->
 
       <p>  Learning is fun but this guys voices sucks ! </p> 
       <!--The Html document is rendered top to bottom !-->
       <!-- block level and inline elements -->
-      <div>Hello world! <span>Kid can you please shut the fuck up ! </span></div>
+      <div name="Block">Hello world! <span>Kid can you please shut the fuck up ! </span></div>
       <div>HEllo all </div><span>collin sucks ! </span>
       <div>
         <!-- some of the sematic heading tags offred in html 4/5-->
-      <h1>This are all the </h1>
+      <h1 name= "Head">This are all the </h1>
       <h2> heading  structure tags in html</h2>
       <h3>from most important </h3>
       <h4>To least important </h4>
@@ -62,9 +74,16 @@
       <div>
         &quot;Hey&nbsp;this&nbsp;is&nbsp;&lt;&nbsp;less&nbsp;than&nbsp;and&nbsp;this&nbsp;is&nbsp;&gt;&nbsp;greater&nbsp;than&nbsp;and&nbsp;here&nbsp;is&nbsp;&amp&nbsp;ampersand&nbsp;&quot; <!--And they are all together thanks to nbsp-->
       </div> <!--Character Entity refrences -->
+      <div> <!--This is the link Division-->
+        <a href="Coursera.html" title = " Coursera Document ">Coursera Document </a> <br/><!-- Internal Link -->
+        <a href ="http://www.google.com" title = "Google" target = "_blank">Google </a> <!--External link-->
+        </div>
+       <img src ="https://qph.fs.quoracdn.net/main-qimg-d55b1be53833c3dcd7c40fadc3cde10"  width = "480px" height="480px" alt = "This image :)" />
+
+     
       <footer>
         Copyright &copy; FuckYou.Inc 
       </footer>
-     
+     <a name="but"></a>
     </body>
 </html>
