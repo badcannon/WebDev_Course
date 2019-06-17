@@ -191,11 +191,141 @@ CSS : -> Cascading style sheets
 
 Every browser Comes with a default css style by the browser ! 
 
+Css selector are used to determine which html element , or set of elements to apply css 
+declarations to . The browser uses the Selector Apis to traverse the DOM and Pick out the matching elements 
+
+Even js uses the Selector apis of the browser to add behavior to them 
+
+3 Types of Selectors : 
+1>Element  
+2> Id 
+3> Class 
+
+1> We just specify the element name : 
+   if we specify p {
+          color:blue ; 
+
+   }
+   here all the paragraphs will only be affected 
+
+2>  here the Class selector is specified with a .
+    eg : 
+             .blue {
+                 color : blue; }
+        For this to be applied element must have a class attribute with the class name 
+        eg : <p class = "blue" ></p>
+
+3> Id selector is used with a name preceded by a # sign , for this to be applied a attribute must be 
+    defined in the element with id attribute 
+    eg : #ID{
+        color : blue;
+    }
+    <p id = "ID"></p>
+
+    We can group one or more selectors with a ',' operator 
+    eg : div,.blue{
+        color :blue;
+    }
+    blue color text will be applied for both div and class wit .blue value 
+
+    Here id is not reuseable here since a html page can only have one id value 
+
+Combining selectors : 
+
+Element with class selector : Eg :
+p.big {
+  font-size : 20px ;
+}
+here select all the elements p with class big 
+<div class = "big " > </div>
+<p class = "big" > </p>   <-- here the styling only affects this element  
+
+
+Child Selector : 
+
+Target every child element which is a direct child of another element 
+any element which is a direct child (from right to left ! )
+Eg : 
+
+article > p  {
+    color : blue ;
+}
+
+<article>
+     <p>   <-- Styling will be applied to this element !
+       
+        p></p> <-- this element is not affected ! 
+
+     </p>   
+</article>
+
+<p></p> <-- this element is not affected ! 
+
+article > .colored {
+
+}
+every element with class colored that is a direct child of article element is affected ! 
 
 
 
 
+Descendant Selector : 
 
+Here the element is affected although its not a direct descendant of the element in question ! 
+element from right to left at any level is affected 
+eg : 
+article p { 
+    color : blue; 
+}
+
+<article> 
+      <p> <-- Affected 
+          <p></p> <-- Affected 
+      </p>
+
+</article>
+<p></p> <-- Not affected ! 
+
+eg : 
+.colored  p {
+     
+}                  p if a descendant of .colored class then the styling will be applied ! 
+
+
+
+Adjacent sibling selector (Selector + Selector)  MORE INFO ?! 
+Genera sibling selector (selector ~ Selector )   MORE INFO ?! 
+
+
+
+Pseudo-class selectors address targeting only structures that can be targeted by
+simple combination of regular selectors,or the ability to style based on user interaction 
+with the page 
+
+eg : like an element changes style when the user moves his mouse over 
+
+Syntax : 
+
+selector : PseudoClassName {
+
+}
+
+Discussed here are : 
+:link , :visited , :hover ,:active , :nth-child() 
+
+:link - > they are used to change how a link looks 
+Applicable to a tag
+
+:visited - > they are used to change how a visited link looks 
+applicable to a tag 
+
+:hover -> style how an element looks when the mouse is hovered over it ! 
+
+:active -> style how an element looks when the user has his mouse clicked on the element and yet to release ! 
+
+:nth-child() -> targets the nth child of no. of elements :D
+
+Look at the css style practice html :D 
 
 
 

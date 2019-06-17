@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Coursera Css Learning Thingy !!  </title>
+        <style>
+         p{
+             color : blue;
+         }
+         #Heading {
+          color : gold;
+          text-align : center;
+         }
+         .Class{
+             color : red ;
+             font-weight :bold;
+             font-style:italic;
+             font-size:20px;
+             background-color : orange ;
+             text-align : center ;
+         }
+
+         section > div {
+             color : palegreen;
+             text-shadow: 20px;
+             background-color : purple ;
+             opacity: 0.6;
+         }
+       
+
+         section li{
+             color:greenyellow;
+             background: whitesmoke;
+             opacity: 0.8;
+
+         }
+
+         li.pink{
+            color : pink;
+            background-color:red;
+        }
+         p#New{
+             color : orangered;
+             font-size:25px;
+         }  
+
+         section > .MathSucksSometimes {
+             font-weight : bold;
+             color : orchid;
+         }
+         section > #Kidding {
+             color:azure;
+             font-size :23px ;
+             background-color : lightblue;
+         }
+
+         section .IamCool{
+             color : cornflowerblue;
+             font-size :  30px;     
+         }
+
+         section #TrueThat{
+             color :turquoise;
+             font-size : 20px;
+         }
+
+         header li{
+             font-size : 24px;
+             list-style :none; /*get rid of the bulletn points :D*/
+         }
+         a:link,a:visited{
+             text-decoration: none;
+             background-color : orange;
+             border : 1px solid orangered;
+             color : blue;
+             display :block;
+             width:200px;
+             margin-bottom : 2px;
+             text-align : center;
+            }
+         a:hover ,a:active{
+             color : black ;
+             background-color : orchid;
+             font-size : 28px;
+         }
+
+         header li:nth-child(2) {
+                  font-size : 24px; /*it works lol :D*/
+           }
+           section div:nth-child(2){
+               background-color : pink;
+               color:black;
+               font-size:24px;
+           }
+           section div:nth-child(2):hover {
+               color:blue;
+               background-color : orchid;
+               font-size:28px;
+           }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="http://www.google.com">Google</a></li>
+                    <li><a href="HtmlBasics learning thingy.html" >Home</a></li>
+                    <li><a href="Css.html" >Same page !</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 id= "Heading">This is the Css Styling Course Practice Page ! </h1>
+    <p>This is to demonstrate Single Element Selector ! </p>
+    <div class = "Class"> This demonstrates a Single Class element ! </div>
+    <section>
+        <div>
+            This demonstrates the Direct Child thingy or the child Selector ! 
+        </div>
+        <div>
+            Nth-Child and the hover :D 
+        </div>
+    </section>
+        <section>
+            <article>
+                <p>List with descendants ! </p>
+                <ol>
+                    <li id="TrueThat">
+                        Hello World! 
+                    </li>
+                    <li class = "pink">
+                        Pink nip
+                    </li>
+                    <li class = "IamCool">
+                        orange Cunt ! 
+                    </li>
+                </ol>
+            </article>
+            <p class ="MathSucksSometimes"> Math sucks Sometimes !</p>
+            <p id = "Kidding">Just Kidding :D </p>
+
+        </section>
+        <p id="New">This is combination of element and id Selector</p>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
