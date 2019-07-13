@@ -180,6 +180,8 @@ CSS : -> Cascading style sheets
 
             they have colon in b/w and a semicolon to end 
         
+
+            1
             Eg : p{
                  color:blue ;
                  font-size :20px;
@@ -328,6 +330,129 @@ applicable to a tag
 Look at the css style practice html :D 
 
 
+Continuation  ->
+
+Style Placement : 
+Css can be applied by using a style attribute for any element and is called the inline styling 
+It is least reuseable 
+
+External Style Sheets : are css files that can be used again and again 
+using the link tag : <link rel ="stylesheet" href="Style.css">
+
+in External Style Sheet : 
+  p {
+      font-size : 140%;
+  }
+Here 140% it means it is 140% times the default value 
+
+Conflict Resolution :
+
+how to tell which css rule wins : 
+                                Origin ,merge,inheritance,specificity 
+        Origin and merge : The last Declaration wins 
+        the html is processed Sequentially that is its top to bottom 
+        For precedence of external css think of it as its pasted in the head 
+
+        Declaration are targeting the same element example color and size 
+        and if they are from different origin then the declarations merge 
+
+        -- In External Style Sheet :--
+        p{
+                color : white;
+                background-color: grey;
+                font-size:140%;
+
+        }
+        --In head part of the html -- 
+        p{
+            color : maroon;
+        }
+
+        --IN p -- 
+        <p style = "color : black"></p>
+
+        here the output will be grey background black color text for the above p
+        if there are more p then they will be maroon and grey back ground and font size will be exts stylesheet font size 
+        this is because of origin and merge concepts 
+
+        Inheritance DOM -  >Document Object model 
+        if a color property is specified to a body tag every decendent of that element will inhertance will have that property 
+        ie.., every children and grand children will be affected 
+
+        Specificity : Most Specific Selector Combination wins 
+
+        Specificity score : 
+        Using Style Attribute - > 
+        Usage of ID ->
+        Class,PseudoClass attribute ->
+        Number of Elements - >
+
+        Eg : 
+
+        div #myparg {
+            color:blue;
+        }
+        Using Style Attribute - > 0
+        Usage of ID -> 1
+        Class,PseudoClass attribute -> 0
+        Number of Elements - > 1 
+
+        Score = 101
+
+        div.big p {
+            color : green;
+        }
+
+        Using Style Attribute - > 0
+        Usage of ID -> 0
+        Class,PseudoClass attribute -> 1
+        Number of Elements - > 2 
+
+        score = 12 
+
+        The first Style wins :D 
+        !important can override any other style in the document :
+        eg : 
+        p{
+            color : red !important;
+        }
 
 
+        Styling Text : 
+        font-family : ; - > we can give one or more fonts so the user computer can render one or the other 
+        we can specify if the users default must be a serif or a sans serif type of font 
+        serif are fonts having those swigalles 
+        san serif have just T straight lines 
+
+        color : defines the color of the text : 
+        here we can directly specify the color or use the hexadecimal values :
+        #0000ff here the first 2 zeros are red , the next 2 are green and the last two are blue 
+        00 is the lowest level and the ff are the highest value 
+
+        font-style : we can specify if they want ot be italic or not 
+        font-weight - normal to bold we can also specify with numbers like 900 is bold 
+        font-size is the size of the font and default of all the browsers are 16px 
+
+        text-transform can transform the text like capitalize or lowercase or uppercase 
+
+        text-align : can justify the alignment in the block
+
+relative font size : 
+        here we can define the relative sizing using em 
+        if we have a size defined for the overall parent elemnt then we can use em in the subsequent 
+        child elements where the effects will be combined than overwritten 
+
+        eg : 
+        body {
+            font-size : 120%;
+        }
+   here the parent element of 3 p tags in body  have a font size of 120% that of the default size 
+   <div style = "font-size : 2em;"> 2*120%
+       <div style = "font-size : 2em; "> 2*2 *120% 
+           <div style ="font-size:0.5em"></div> 2*2*0.5*120%
+       </div>
+   </div>
+        
+
+   
 -->

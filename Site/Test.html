@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test!</title>
+        <style>
+         header >nav > ul > li {
+             list-style : none ;
+             background-color :red;
+             width:200px;
+             margin-bottom: 1px;
+         }   
+         header > nav > ul > li > ul > li {
+            list-style : none ;
+            margin-bottom: 1px;
+
+         }
+        header > nav > ul > li > ul > li > a:visited , a:link{
+            text-decoration: none; 
+            color : blue ;
+            background-color: red;
+            width : 200px;
+            display:none ;
+            margin-bottom: 1px;
+
+         }
+         header li:nth-child(2):hover > ul > li > a {
+             display : inline-block ;
+             background-color : orchid;
+             margin-bottom: 1px;
+
+         }
+               
+       </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                       Popular Websites 
+                       <ul>
+                           <li><a href="https://www.google.com" target ="_blank" alt="Google.com">Google</a></li>
+                           <li><a href="https://www.yahoo.com" target = "_self">Yahoo</a></li>
+                       </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>
