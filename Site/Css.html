@@ -1,13 +1,19 @@
 <html>
     <head>
         <title>Coursera Css Learning Thingy !!  </title>
+        <link rel="stylesheet" href="StyleSheetBox.css"/>
         <style>
+         body{
+             background-color:palegoldenrod;
+         }
+         
          p{
              color : blue;
          }
          #Heading {
-          color : gold;
+          color : magenta;
           text-align : center;
+          clear :left;
          }
          .Class{
              color : red ;
@@ -65,7 +71,14 @@
          header li{
              font-size : 24px;
              list-style :none; /*get rid of the bulletn points :D*/
-         }
+             float:left;
+             clear:right;
+             margin-right:2px;
+             box-sizing: border-box;
+             width:25%;
+            padding:15px;
+            box-align:center;
+            }
          a:link,a:visited{
              text-decoration: none;
              background-color : orange;
@@ -138,6 +151,13 @@
 
         </section>
         <p id="New">This is combination of element and id Selector</p>
+
+
+        <div id="Box">
+            <div id ="Content">
+                Box Content 
+            </div>
+        </div>
     </body>
 </html>
 

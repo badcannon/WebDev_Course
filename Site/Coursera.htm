@@ -349,7 +349,7 @@ Conflict Resolution :
 
 how to tell which css rule wins : 
                                 Origin ,merge,inheritance,specificity 
-        Origin and merge : The last Declaration wins 
+        Origin and merge  : The last Declaration wins 
         the html is processed Sequentially that is its top to bottom 
         For precedence of external css think of it as its pasted in the head 
 
@@ -376,7 +376,7 @@ how to tell which css rule wins :
         this is because of origin and merge concepts 
 
         Inheritance DOM -  >Document Object model 
-        if a color property is specified to a body tag every decendent of that element will inhertance will have that property 
+        if a color property is specified to a body tag every descendent of that element will inherit that property 
         ie.., every children and grand children will be affected 
 
         Specificity : Most Specific Selector Combination wins 
@@ -429,7 +429,7 @@ how to tell which css rule wins :
         #0000ff here the first 2 zeros are red , the next 2 are green and the last two are blue 
         00 is the lowest level and the ff are the highest value 
 
-        font-style : we can specify if they want ot be italic or not 
+        font-style : we can specify if they want to be italic or not 
         font-weight - normal to bold we can also specify with numbers like 900 is bold 
         font-size is the size of the font and default of all the browsers are 16px 
 
@@ -439,7 +439,7 @@ how to tell which css rule wins :
 
 relative font size : 
         here we can define the relative sizing using em 
-        if we have a size defined for the overall parent elemnt then we can use em in the subsequent 
+        if we have a size defined for the overall parent element then we can use em in the subsequent 
         child elements where the effects will be combined than overwritten 
 
         eg : 
@@ -453,6 +453,163 @@ relative font size :
        </div>
    </div>
         
+in html every element is considered a box : 
+Each box contains a border ,margin and padding 
+The box model refers to the components that make up an HTML box
+as well as the rules that govern how these box components affect the layout
+as well as how width and height of the box are calculated.
 
+
+Border : property defines the border of an element 
+margin defines the margin of a element 
+padding sets the padding area on all the four sides of an element 
+
+The rest is in Style Sheet box : 
+
+Margins : 
+
+Margins left and right cumulative margin will be the  addition of the two 
+if the margins will be up and down then cumulative margin will be the larger margin 
+margin 
+
+
+there is always a margin defined by default by the browser which can be reset 
+using the * selector this is known as style resetting 
+
+
+if we have the heigh of the box very less opposed to the content in it 
+then there will be content overflowing out of the box 
+we can use the overflow property and use auto to add a scroll or we can 
+use hidden to show the same and we can use show or scroll to show it always and 
+show scroll on both v and h axis respectively
+
+background property 
+For solid color : we can use background-color : value ;
+will work 
+
+for a background image (Has more priority): background-image : url("~Path ");
+url must be file path or a image hosted 
+
+for repeat : we can use background-repeat : it will control the background repeat 
+
+for positioning : background-position: value ; 
+can be used with different values right , left , top right etc.. 
+
+we can combine all the above using the background property .. though it will overright all the other 
+property (background) : background : url() [repeat] [position] [color]
+
+positioning elements using float : 
+Please refer to html Floating element html :D
+
+When a element floats the element is removed from the normal dom flow 
+we can clear left right or both when we want elements to float with nothing on the
+left right or both sides 
+
+illustrated in the Float.html 
+
+floats don't have vertical margin collapse 
+
+Relative and Absolute Element Positioning:
+
+Static positioning is default for all elements except html 
+
+Relative is when a element is placed relative to its previous spot ..
+that spot is reserved in the dom and no other element can take that spot 
+
+if position is set to relative 
+then the 
+subsequent bottom and right or top and left property values will be defined from the previous position 
+ie. it is relative 
+
+Negative values are allowed 
+absolute positioning when you set this it will be relative to the parent element 
+the nearest parent + it will be removed from the dom and other elements can take its spot 
+
+Refer to Positioning.html 
+
+when we define the position we only give it an anchor then we have to 
+give offset which depends on the position property value 
+
+in absolute positioning if all the parents are not not having a postioning achor then i will use the html's default achor which is set to 
+relative  
+
+
+
+media queries : 
+Are used to define style sheets based on set condition : 
+these style sheets get executed when the required conditions meet 
+
+syntax : @media (Condition) {
+    styles rules ://
+    selector {
+        property:value ;
+    }
+}
+ some common features include > : @media (max-width : 800px) {}
+                                  @media (min-width : 800px) {}
+                                  @media (orientation : portrait) {}
+                                  @media screen {}
+                                  @media print {}
+max width is the maximum width for which the styles apply
+min width is the minimum width for which the styles apply 
+orientation for portrait or landscape 
+screen and print 
+you can also height instead of width
+
+there can be logical operator : eg : and 
+     @media (max-width : 800px) and (min-width : 200px){}
+
+     or is represented using ',' operator 
+
+media queries are used only after defining a base style and be careful about the range of width or height 
+one style can overlap and apply on the second 
+
+eg : @media (min-width : 100px )
+     @media (max-width : 99px )
+
+code part can be found in media query html document 
+
+large devices can be at least 1200px wide 
+small devices can be at least 992px b/w 1199px
+the point b/w one media query and the other is known as breakpoints 
    
+
+
+Responsive Device :
+
+A site designed to adapt its layout to the viewing environment by using fluid 
+proportion based grids flexible images and css3 media quires 
+
+Sites layout must adapt to the size of the device 
+Content verbosity or its visual delivery may change 
+
+Alternative to responsive device 
+The server can detect the device the user is using and can serve either a 
+mobile based browser or a web based browser 
+
+but this is not better than a responsive design because then u have to maintain 2 different websites and 
+u cant possible target all the sub different device in the mobile device section 
+
+in a responsive device framework the page layout is divided into 12 column grids 
+12 is so because its divisible by many multiples like 2 , 3, 4 ,6 and 12 
+so it can be divided into 3 or 2 columns easily 
+
+
+The complete width is 100% there fore each column is 100/12 that is 8.33%
+We can also nested layouts like 4 4 and 4 in main and then 3333 in each of the 4 4 and 4 
+
+Code Example can be found in responsive Design html 
+
+Twitter Bootstrap : 
+ Bootstrap is the most popular html css and js framework for developing responsive
+mobile first projects on the web 
+
+The are some html constructs requirement but its not to aggressive it also has a cool js framework 
+
+
+Find More on bootstap in the folder with the same name !
+
+
 -->
+
+

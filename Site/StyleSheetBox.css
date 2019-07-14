@@ -1,0 +1,36 @@
+*{
+    box-sizing : border-box;
+}
+
+body{
+  background-color:gray;
+  margin : 0;/*This is used to counter the default browser Margin*/
+  padding : 0;   
+}
+
+
+
+#Content{
+    background-color:palegreen;
+    padding : 10px ;
+    
+}
+
+#Box{
+    background-color:blue;
+    border :5px solid black;
+    padding : 10px 10px 10px 10px;
+    margin : 40px;
+    width :300px ;  /*Here the width is actually 330px wide since the 
+    border and padding add up on both sides with the border included  
+    to Correct this css3 offers border-box value for the box-sizing property
+    which will size the box exactly the size you want */
+    /*box-sizing: border-box;*/
+    
+}
+
+
+/*Box sizing is not inherited therefore to get around that we can create a *
+selector which will select all the elements in the html */ 
+
+ 
