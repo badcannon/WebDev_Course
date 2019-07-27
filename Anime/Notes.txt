@@ -1,0 +1,19 @@
+header ! part ! :
+
+<nav id="header-nav" class="navbar navbar-default">
+                 <div class="container">
+                     
+                 </div>
+    
+we are going to create the nav bar in the header section of the page 
+with the nav element 
+
+we use the id = "header-nav" : 
+
+and we will use 2 classes of the bootstrap with navbar and navbar-default 
+which share properties with each other 
+
+here the container is used to for the header and we dont want any padding and it is not nessacary for it to
+stretch all the way to the browser ends 
+
+Its obsolete 

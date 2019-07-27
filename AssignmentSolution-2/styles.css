@@ -55,6 +55,12 @@ h1{
 
 }
 
+img.col-lg-12{
+  float: left;
+  position: absolute;
+  left:500px;
+}
+
 .row>div{
     background-color:gray;
     border:3px solid black;

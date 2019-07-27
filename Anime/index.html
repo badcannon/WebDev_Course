@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Anime
+        </title>
+        <meta name="viewport" content ="width=device-width ,initial-scale=1"/>
+        <meta charset="utf-8"/>
+       
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href=" styles.css"/>
+         
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap" rel="stylesheet">  
+    <body>
+         <header>
+            <nav class="navbar navbar-default" id="header-nav">
+                <div class="container">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav" aria-expanded="false">
+                                <span class="sr-only">Toggle Navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                    </button>                    
+                    
+                    
+                    <a class="pull-left visible-md visible-lg" href="#">
+                        <div><img  src="Assets\naruto.png" width ="180px"
+                            height ="140px" ></div>
+                    </a>
+                    <div class="navbar-brand">
+                        <a href="index.html"><h1>Anime</h1></a>
+                    <p>
+                        <img src= "Assets\FREE.webp" alt="Free Anime!" width="60px" height="50px"/>
+                        <span>Free Anime Collection!</span>
+                    </p>
+                    </div>
+                  </div>
+                  <!-- Buttons of nav bar! -->
+                  <div id="bs-nav" class="collapse navbar-collapse">
+                      <ul id="nav-list" class="nav navbar-nav navbar-right">
+                          <li> <a href="Catalog.html"><span class="glyphicon glyphicon-th-large "> </span><br class="hidden-xs">Catalog</a></li>
+                          <li> <a href="#"><span class="glyphicon glyphicon-info-sign "></span><br class="hidden-xs"/>About</a></li>
+                          <li> <a href="#"><span class="glyphicon glyphicon-comment "></span><br class="hidden-xs"/>Report</a></li>
+                          <li id = "phone" class="hidden-xs"> <a href="tel:7338013882"><span class=" glyphicon glyphicon-earphone "><span id="moveup">91-7338013882</span></span><br class="hidden-xs"/></a><div>*Customer Service</div></li>
+                          
+                      </ul>
+                  </div>
+                  </div>
+                  </nav>
+         </header> 
+         <div  id = "call-btn" class="visible-xs">
+                <a class="btn btn-default" href="tel:7338013882">
+                    <span class="glyphicon glyphicon-earphone"> 7338013882</span>
+                </a>
+                <div id="xs-deliver" class="text-center visible-xs">*Customer Service</div>
+
+         </div>
+         <div id="main-content" class="container">
+             <div class="jumbotron">
+                 <img src="Assets\main-cover-768.jpg" class="img-responsive visible-xs" alt="Dragon Ball Super" title="Dragon Ball Super!"/>
+             </div>
+
+             <div id="home-tiles" class="row">
+                 <div class="col-md-4 col-sm-6 col-xs-12">
+                     <a href="Catalog.html"><div id="cat-tile"><span>Catalog</span></div></a>
+                 </div>
+                 <div class="col-md-4 col-sm-6 col-xs-12">
+                    <a href="Popular-cat.hmtl"><div id="pop-tile"><span>Popular</span></div></a>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <a href="Random-cat.hmtl"><div id="ran-tile"><span>Random</span></div></a>
+                </div>
+             </div> <!--End of home tile-->
+         </div> <!--End of main Content-->
+         
+         <footer class="panel-footer">
+         <div class="container">
+            <div class="row">
+                <section id="copyright" class="col-sm-6">
+                    <span>Copyright:</span><br/>
+                    All Copyright&copy; reserved by their respective owners</section>
+                <section id="Top" class="col-sm-6">
+                    <a class="btn btn-default btn-lg " id="abutton" href="#top"><span>Top</span></a></section>
+         </div>
+     </div>
+     </footer>
+         
+
+         <script
+			  src="https://code.jquery.com/jquery-2.1.4.js"
+			  integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4="
+			  crossorigin="anonymous"></script>
+		
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html> 
+
+
+
+
+
+ <!--navbar is the navbar base class with the sub class navbar-default-->
+       <!-- container class changes the width based on the browser width which is different from container-fluid-->
+        <!--container class  will hold all the contents of the header in the container !  -->
+     <!-- navbar-brand class is recommended to  be used on the brand name -->
+     <!-- pull-left class floats the the element to the left  -->
+
+
+     <!-- visible-md visible-lg class will only allow the element to be visible in medium and large displays 
+    in the smaller displays it will be hidden or removed  -->
+
+
+    
+<!-- Here navbar-toggle controls the placement of the navbar button ie , hamburger ,
+    the collapsed is not a class of bootstrap , it will be taken out once the button is clicked 
+    it only signifies that the button is collapsed , when the button is collapsed 
+
+    data- elements are html5 apis which make it easier for the js to collect data 
+    and aria-expanded is for the screen readers 
+
+    the first span is screen reader only which is only for screen reader 
+    
+
+-->
